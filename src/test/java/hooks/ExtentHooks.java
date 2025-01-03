@@ -82,6 +82,7 @@ public class ExtentHooks {
             test.pass("Scenario passed: " + scenario.getName());
         }
 
+        System.out.println("New Update");
         // Quit WebDriver and clean up
         if (driver != null) {
             driver.quit();
