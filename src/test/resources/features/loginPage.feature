@@ -7,11 +7,13 @@ Feature: Login Functionality for openCart E-commerce website
   Background:
     Given I am on the openCart Login Page
 
+    @smoke
   Scenario: Successful Login with Login Credentials
     Given I have entered a valid username and password
     When I click on Login Button
     Then I should be logged in successfully
 
+      @Sanity
   Scenario Outline: Unsuccessful Login with invalid or empty Credentials
     Given I have entered invalid <username> and <password>
     When I click on Login Button
@@ -23,6 +25,12 @@ Feature: Login Functionality for openCart E-commerce website
       | abccc             | validPassword   | Warning: No match for E-mail Address and/or Password. |
       | valid@gmail.com   | abccc           | Warning: No match for E-mail Address and/or Password. |
 
+    @smoke
    Scenario: Navigating to the forgotten password page
      When I click on the "Forgotten Password" link
      Then I should be redirected to the password reset page
+
+  @Sanity
+  Scenario: Navigating to the forgotten password page
+    When I click on the "Forgotten Password" link
+    Then I should be redirected to the password reset page

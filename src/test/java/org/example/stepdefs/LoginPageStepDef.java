@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.pages.LoginPage;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -29,10 +30,12 @@ public class LoginPageStepDef {
 
     }
 
+
     @Given("I have entered a valid username and password")
+
     public void i_have_entered_a_valid_username_and_password() {
         loginPage.enterEmail("qatestertest@gmail.com");
-        loginPage.enterPassword("Test@1234");
+        loginPage.enterPassword("Test@123");
         test.info("Entered valid username and password.");
     }
 
