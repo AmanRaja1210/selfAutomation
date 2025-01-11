@@ -16,7 +16,7 @@ import org.junit.Test;
             },
             monochrome = true,
             publish = true,
-            tags = "@smoke"
+            tags = "@Sanity"
     )
     public class TestRunnerSmoke extends AbstractTestNGCucumberTests {
 
